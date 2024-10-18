@@ -1,5 +1,35 @@
-
 #include <stdio.h>
+
+void cv1(){
+    int x, y, z;
+    printf("zadaj dve cisla oddelene medzerou: ");
+    scanf("%d %d", &x, &y);
+    z = (x>=y) ? x : y;
+    printf("a) vacsie z cisel: %d \n", z);
+    if (y > x)
+    {
+        printf("b) mensie z cisel : %d \n", x);
+    }
+}
+
+void cv2(){
+    int a;
+    printf("zadaj 1 znak: ");
+    a = getchar();
+    if ((57 >= a) && ( a >= 48)){
+        printf("To je cislo");
+    } else {
+        if ((90 >= a) && ( a >= 65)) {
+            printf("To je velka bukva");
+        } else {
+            if ((122 >= a) && ( a >= 97)){
+                printf("To je mala bukva");
+            } else {
+                printf("To je ina znacka");
+            }
+        }
+    }
+}
 
 int dec2bin(int num)
 {
@@ -29,8 +59,7 @@ int dec2hex(int num)
     return hex;
 }
 
-int main()
-{
+void cv3(){
     int a;
     char b;
     printf("zadaj 1 znak: ");
@@ -46,5 +75,11 @@ int main()
         printf("V binarnej: %d \n", dec2bin(a));
         printf("V hexidecimalnej: %d \n", dec2hex(a));
     }
+}
+
+int main(){
+    //cv1();
+    //cv2();
+    //cv3();
     return 0;
 }
